@@ -1,0 +1,15 @@
+Contexto de la documentación técnica:
+DB-SI 4: Los extintores deben colocarse a una altura máxima de 1.20m.
+
+DB-SI 4: La distancia máxima entre extintores será de 15 metros.
+
+Pregunta del usuario:
+¿A qué altura se ponen los extintores?
+
+Instrucciones:
+- Basa tu respuesta ÚNICAMENTE en el contexto proporcionado.
+- Si la información solicitada no está en el contexto, indica: "No dispongo de esa información en la documentación consultada".
+- Cuando menciones requisitos técnicos, cita la sección específica.
+- Sé conciso pero completo.
+
+Respuesta:

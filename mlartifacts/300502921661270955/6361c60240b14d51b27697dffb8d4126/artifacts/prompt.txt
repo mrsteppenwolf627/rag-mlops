@@ -1,0 +1,11 @@
+Contexto de la normativa CTE:
+DB-SI 4: Los extintores deben colocarse a una altura máxima de 1.20m.
+
+DB-SI 4: La distancia máxima entre extintores será de 15 metros.
+
+Pregunta del usuario:
+¿A qué altura se ponen los extintores?
+
+Instrucciones:
+- Responde basándote ÚNICAMENTE en el contexto.
+- Si no está la información, di que no está disponible.

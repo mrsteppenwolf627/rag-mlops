@@ -1,0 +1,15 @@
+Contexto de la documentación técnica:
+DB-SI 4: Los extintores se colocan a 1.20m de altura.
+
+DB-SI 4: Deben estar señalizados con carteles fotoluminiscentes.
+
+Pregunta del usuario:
+¿Cuántos extintores ha de haber por metro cuadrado?
+
+Instrucciones:
+- Basa tu respuesta ÚNICAMENTE en el contexto proporcionado.
+- Si la información solicitada no está en el contexto, indica: "No dispongo de esa información en la documentación consultada".
+- Cuando menciones requisitos técnicos, cita la sección específica.
+- Sé conciso pero completo.
+
+Respuesta:
