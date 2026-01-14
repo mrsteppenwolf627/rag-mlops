@@ -28,11 +28,11 @@ jobs:
       run: poetry install
 
     - name: Run Tests
-      # Definimos variables dummy para que no falle al no encontrar el .env
+      # Definimos variables de entorno para los tests
       env:
         OPENAI_API_KEY: "sk-dummy-key-for-testing"
         MLFLOW_TRACKING_URI: "http://localhost:5000"
         REDIS_HOST: "localhost"
-      # Importante: ejecutamos solo la carpeta tests para ignorar notebooks
-        PYTHONPATH: .   # <--- ¡AÑADE ESTA LÍNEA!
-    run: poetry run python -m pytest tests
+        PYTHONPATH: .
+      # Importante: 'run' debe estar alineado con 'env' (2 espacios)
+      run: poetry run python -m pytest tests
