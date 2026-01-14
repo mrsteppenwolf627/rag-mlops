@@ -9,6 +9,17 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    
+    services:
+      redis:
+        image: redis
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
 
     steps:
     - name: Checkout code
@@ -25,14 +36,13 @@ jobs:
         echo "$HOME/.local/bin" >> $GITHUB_PATH
 
     - name: Install dependencies
+      # VOLVEMOS AL COMANDO NORMAL (Ahora funcionará gracias al arreglo en toml)
       run: poetry install
 
     - name: Run Tests
-      # Definimos variables de entorno para los tests
       env:
         OPENAI_API_KEY: "sk-dummy-key-for-testing"
         MLFLOW_TRACKING_URI: "http://localhost:5000"
         REDIS_HOST: "localhost"
-        PYTHONPATH: .
-      # Importante: 'run' debe estar alineado con 'env' (2 espacios)
-      run: poetry run python -m pytest tests
+      # Ya no hace falta PYTHONPATH ni python -m, pytest funcionará directo
+      run: poetry run pytest tests

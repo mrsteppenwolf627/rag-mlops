@@ -2,7 +2,8 @@
 name = "rag-mlops"
 version = "1.0.0"
 description = "RAG System with MLOps"
-authors = ["Aitor <tu@email.com>"]
+authors = ["Aitor <aitoralmu21@gmail.com>"]
+packages = [{include = "sre", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
