@@ -34,4 +34,5 @@ jobs:
         MLFLOW_TRACKING_URI: "http://localhost:5000"
         REDIS_HOST: "localhost"
       # Importante: ejecutamos solo la carpeta tests para ignorar notebooks
+        PYTHONPATH: .   # <--- ¡AÑADE ESTA LÍNEA!
     run: poetry run python -m pytest tests
