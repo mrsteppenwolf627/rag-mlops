@@ -10,6 +10,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     
+    # Mantenemos Redis para asegurar que no falle la conexión
     services:
       redis:
         image: redis
@@ -36,7 +37,7 @@ jobs:
         echo "$HOME/.local/bin" >> $GITHUB_PATH
 
     - name: Install dependencies
-      # VOLVEMOS AL COMANDO NORMAL (Ahora funcionará gracias al arreglo en toml)
+      # GRACIAS al arreglo en pyproject.toml, ahora esto funcionará sin trucos
       run: poetry install
 
     - name: Run Tests
@@ -44,5 +45,4 @@ jobs:
         OPENAI_API_KEY: "sk-dummy-key-for-testing"
         MLFLOW_TRACKING_URI: "http://localhost:5000"
         REDIS_HOST: "localhost"
-      # Ya no hace falta PYTHONPATH ni python -m, pytest funcionará directo
       run: poetry run pytest tests
